@@ -55,6 +55,7 @@ html {
         @include flex-justify-between();
         padding: 30px 0 20px calc(182px + 5%);
         background-color: #181B21;
+        height:506px;
     
         .hero-content {
             background-color: #181B21;
@@ -193,6 +194,11 @@ html {
         .hero-wrapper {
             padding: 30px 0 20px 20px;
         }
+        .content {
+            .documentation {
+                padding: 0 5% 20px ;
+            }
+        }
     }
 }
 
@@ -201,6 +207,7 @@ html {
         .hero-wrapper {
             padding: 30px 5% 0 ;
             flex-direction: column;
+            height: auto;
 
             .hero-content {
                 text-align: center;
@@ -215,6 +222,11 @@ html {
                     width: 100%;
                     max-height: 300px;
                 }
+            }
+        }
+        .content {
+            .nav-menu {
+                display: none;
             }
         }
     }

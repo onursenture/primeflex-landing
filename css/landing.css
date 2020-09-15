@@ -66,6 +66,7 @@ html {
   justify-content: space-between;
   padding: 30px 0 20px calc(182px + 5%);
   background-color: #181B21;
+  height: 506px;
 }
 .landing-body .hero-wrapper .hero-content {
   background-color: #181B21;
@@ -179,11 +180,15 @@ html {
   .landing-body .hero-wrapper {
     padding: 30px 0 20px 20px;
   }
+  .landing-body .content .documentation {
+    padding: 0 5% 20px;
+  }
 }
 @media (max-width: 992px) {
   .landing-body .hero-wrapper {
     padding: 30px 5% 0;
     flex-direction: column;
+    height: auto;
   }
   .landing-body .hero-wrapper .hero-content {
     text-align: center;
@@ -194,5 +199,8 @@ html {
   .landing-body .hero-wrapper .hero-image img {
     width: 100%;
     max-height: 300px;
+  }
+  .landing-body .content .nav-menu {
+    display: none;
   }
 }
