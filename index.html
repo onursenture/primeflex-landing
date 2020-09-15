@@ -48,7 +48,7 @@
 
 			<div class="hero-npm">
 				<p>npm install primeflex</p>
-				<p><a href="#">copy</a></p>
+				<button class="copy" data-clipboard-text="npm install primeflex">copy</button>
 			</div>
 
 			<div class="hero-links">
@@ -63,6 +63,7 @@
 	</div>
 	
 	<div class="content">
+		<!--Issue #3: Border-right overflows to footer area.-->
 		<div class="nav-menu">
 			<ul>
 				<li class="active-navitem"><a href="#">Setup</a></li>
@@ -193,6 +194,7 @@ $xl:1080px;
 	</div>
 
 	<div class="footer-wrapper">
+		<!--Issue #2: Left identation with documentation content is wrong.-->
 		<div class="footer-content">
 			<h2>Open Source</h2>
 			<p>PrimeFlex is open-sourced on GitHub. Contributions and feedback are welcome!</p>
@@ -217,6 +219,11 @@ $xl:1080px;
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/prism.js"></script>
+	<script src="js/clipboard.min.js"></script>
+
+	<script>
+		var clip = new Clipboard('.copy');
+	</script>
 
 	<script>
 		window.ga = function () { 
