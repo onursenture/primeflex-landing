@@ -19,9 +19,12 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/landing.css">
 	<link rel="stylesheet" href="css/primeflex.min.css">
+	<link rel="stylesheet" href="css/prism.css">
 
 	<meta name="theme-color" content="#fafafa">
 </head>
+
+<!--Todo #2: Change Prism.js background color to #181B21 -->
 
 <body class="landing-body">
 	<div class="topbar">
@@ -81,46 +84,111 @@
 				such
 				utilities when developing applications with PrimeNG.</p>
 			<h3>Download</h3>
-			<p>PrimeFlex is available at npm, if you have an existing application begin with the installation first.</p>
+			<p>PrimeFlex is available at <a href="#">NPM</a>, if you have an existing application begin with the installation first.</p>
+			<pre><code class="language-js">npm install primeflex --save</code></pre>
+			<h3>Import</h3>
+			<p>Next step is adding the primeflex.css to your application to include all utilities. If you prefer to pick the utilities, move to next step instead.</p>
+			<p><strong>angular.json</strong></p>
+			<!--Issue #1: Broken Prism.js indentation-->
+<pre><code class="language-json">"styles": [
+	"src/styles.scss",
+	"./node_modules/primeflex/primeflex.css"
+],</code></pre>
+			<p>PrimeFlex is a lightweight library still if you have an application such as one based on angular-cli that is able to import scss then you will be able to pick the utilities you need to make the app bundle even smaller.</p>
+			<p><strong>angular.json</strong></p>
+			<!--Issue #1: Broken Prism.js indentation-->
+<pre><code class="language-json">"styles": [
+    "src/styles.scss",
+    "./node_modules/primeflex/src/_variables.scss",
+    "./node_modules/primeflex/src/_grid.scss",
+    "./node_modules/primeflex/src/_formlayout.scss",
+    "./node_modules/primeflex/src/_display.scss",
+    "./node_modules/primeflex/src/_text.scss",
+    "./node_modules/primeflex/src/flexbox/_flexbox.scss",
+    "./node_modules/primeflex/src/_spacing.scss",
+    "./node_modules/primeflex/src/_elevation.scss"
+],</code></pre>
+			<h3>Variables</h3>
+			<!--Todo #1: Style variables tables-->
+			<table class="doc-table">
+				<thead>
+					<tr>
+						<th>Variable</th>
+						<th>Description</th>
+						<th>Default</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>$sm</td>
+						<td>Breakpoint of screens such as phones.</td>
+						<td>576px</td>
+					</tr>
+					<tr>
+						<td>$md</td>
+						<td>Breakpoint of screens such as tablets.</td>
+						<td>768px</td>
+					</tr>
+					<tr>
+						<td>$lg</td>
+						<td>Breakpoint of screens such as notebook monitors.</td>
+						<td>992px</td>
+					</tr>
+					<tr>
+						<td>$xl</td>
+						<td>Breakpoint of smaller screens such as desktop monitors.</td>
+						<td>1200px</td>
+					</tr>
+					<tr>
+						<td>$gutter</td>
+						<td>Padding of a grid column.</td>
+						<td>.5rem</td>
+					</tr>
+					<tr>
+						<td>$fieldMargin</td>
+						<td>Spacing of a field. Can be vertical of horizontal depending on form layout.</td>
+						<td>.5rem</td>
+					</tr>
+					<tr>
+						<td>$fieldLabelMargin</td>
+						<td>Spacing of a field label. Can be vertical of horizontal depending on form layout.</td>
+						<td>.5rem</td>
+					</tr>
+					<tr>
+						<td>$helperTextMargin</td>
+						<td>Top spacing of a helper text.</td>
+						<td>.rem</td>
+					</tr>
+					<tr>
+						<td>$spacer</td>
+						<td>Base value to use in spacing utilities, view spacing documentation for details.</td>
+						<td>.5rem</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<p>There are two ways to use these variables, one option is getting the source code of PrimeFlex from github, compile your own primeflex and importing the css file. Other alternative is importing your own variables to override the defaults if your application can import scss files. Example below overrides breakpoints; </p>
+			<p><strong>_overrides.scss</strong></p>
+			<!--Issue #1: Broken Prism.js indentation-->
+<pre><code class="language-scss">$sm:640px;
+$md:720px;
+$lg:960px;
+$xl:1080px;
+</code></pre>
+<pre><code class="language-json">"styles": [
+    "src/styles.scss",
+    "src/_overrides.scss",
+    "./node_modules/primeflex/src/_variables.scss",
+    "./node_modules/primeflex/src/_grid.scss",
+    "./node_modules/primeflex/src/_formlayout.scss",
+    "./node_modules/primeflex/src/_display.scss",
+    "./node_modules/primeflex/src/_text.scss",
+    "./node_modules/primeflex/src/flexbox/_flexbox.scss",
+    "./node_modules/primeflex/src/_spacing.scss",
+    "./node_modules/primeflex/src/_elevation.scss"
+],
+</code></pre>
 
-			<h1>Setup</h1>
-			<p>PrimeFlex is a CSS utility library featuring various helpers such as a grid system, flexbox, spacing,
-				elevation
-				and more. Although it is not required, it is highly recommended to add PrimeFlex as it is likely to need
-				such
-				utilities when developing applications with PrimeNG.</p>
-			<h3>Download</h3>
-			<p>PrimeFlex is available at npm, if you have an existing application begin with the installation first.</p>
-
-
-			<h1>Setup</h1>
-			<p>PrimeFlex is a CSS utility library featuring various helpers such as a grid system, flexbox, spacing,
-				elevation
-				and more. Although it is not required, it is highly recommended to add PrimeFlex as it is likely to need
-				such
-				utilities when developing applications with PrimeNG.</p>
-			<h3>Download</h3>
-			<p>PrimeFlex is available at npm, if you have an existing application begin with the installation first.</p>
-
-
-			<h1>Setup</h1>
-			<p>PrimeFlex is a CSS utility library featuring various helpers such as a grid system, flexbox, spacing,
-				elevation
-				and more. Although it is not required, it is highly recommended to add PrimeFlex as it is likely to need
-				such
-				utilities when developing applications with PrimeNG.</p>
-			<h3>Download</h3>
-			<p>PrimeFlex is available at npm, if you have an existing application begin with the installation first.</p>
-
-
-			<h1>Setup</h1>
-			<p>PrimeFlex is a CSS utility library featuring various helpers such as a grid system, flexbox, spacing,
-				elevation
-				and more. Although it is not required, it is highly recommended to add PrimeFlex as it is likely to need
-				such
-				utilities when developing applications with PrimeNG.</p>
-			<h3>Download</h3>
-			<p>PrimeFlex is available at npm, if you have an existing application begin with the installation first.</p>
 		</div>
 	</div>
 	<div class="footer">
@@ -130,6 +198,7 @@
 	<script src="js/vendor/modernizr-3.11.2.min.js"></script>
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/prism.js"></script>
 
 	<script>
 		window.ga = function () { 

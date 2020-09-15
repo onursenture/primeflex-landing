@@ -175,6 +175,19 @@ html {
 .landing-body .content .documentation {
   padding: 0 calc(182px + 5%) 20px 5%;
 }
+.landing-body .content .doc-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.landing-body .content .doc-table th {
+  border-bottom: 1px solid #ECEFF4;
+  padding: 1rem;
+  text-align: left;
+}
+.landing-body .content .doc-table tbody td {
+  padding: 1rem;
+  border-bottom: 1px solid #ECEFF4;
+}
 
 @media (max-width: 1200px) {
   .landing-body .hero-wrapper {

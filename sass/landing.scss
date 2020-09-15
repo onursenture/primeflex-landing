@@ -186,6 +186,24 @@ html {
         .documentation {
             padding: 0 calc(182px + 5%) 20px 5%
         }
+
+        .doc-table {
+            border-collapse: collapse;
+            width: 100%;
+
+            th {
+                border-bottom: 1px solid #ECEFF4;
+                padding: 1rem;
+                text-align: left;
+            }
+
+            tbody{
+                td {
+                    padding: 1rem;
+                    border-bottom: 1px solid #ECEFF4;
+                }
+            }
+        }
     }
 }
 
