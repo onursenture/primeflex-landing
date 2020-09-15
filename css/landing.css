@@ -188,6 +188,44 @@ html {
   padding: 1rem;
   border-bottom: 1px solid #ECEFF4;
 }
+.landing-body .footer-wrapper {
+  display: flex;
+  height: 330px;
+  background-color: #181B21;
+  justify-content: space-around;
+  padding: 0 calc(182px + 5%) 20px 5%;
+}
+.landing-body .footer-wrapper .footer-content h2 {
+  color: white;
+}
+.landing-body .footer-wrapper .footer-content p {
+  color: rgba(255, 255, 255, 0.74);
+}
+.landing-body .footer-wrapper .footer-content .button-contribute {
+  background: #0078E3;
+  border: 0;
+  border-radius: 2px;
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+}
+.landing-body .footer-wrapper .footer-content .button-contribute:hover {
+  cursor: pointer;
+  background-color: #005db0;
+}
+.landing-body .footer-wrapper .footer-content > ul {
+  padding: 0 1rem;
+}
+.landing-body .footer-wrapper .footer-content > ul > li {
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+}
+.landing-body .footer-wrapper .footer-content > ul > li > a {
+  color: rgba(255, 255, 255, 0.74);
+}
+.landing-body .footer-wrapper .footer-content > ul > li > a:hover {
+  color: #0078E3;
+}
 
 @media (max-width: 1200px) {
   .landing-body .hero-wrapper {
