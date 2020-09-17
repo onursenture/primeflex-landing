@@ -135,13 +135,12 @@ html {
   flex-shrink: 0;
   width: 182px;
   background-color: #fafbfd;
+  border-right: 4px solid #d9dbdf;
 }
 .landing-body .content .nav-menu > ul {
-  height: 100%;
   list-style-type: none;
   margin: 0;
   padding: 30px 0 0;
-  border-right: 4px solid #d9dbdf;
 }
 .landing-body .content .nav-menu > ul > li {
   padding: 5px 20px;
@@ -187,6 +186,13 @@ html {
 .landing-body .content .doc-table tbody td {
   padding: 1rem;
   border-bottom: 1px solid #ECEFF4;
+}
+.landing-body .content .card {
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  margin-bottom: 2rem;
 }
 .landing-body .footer-wrapper {
   display: flex;
