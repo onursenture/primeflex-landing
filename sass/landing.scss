@@ -88,6 +88,7 @@ html {
                     text-shadow: none;
                     font-weight: 600;
                     font-size: 1rem;
+                    @include transition(color .2s);
                 }
 
                 &::after {
@@ -103,8 +104,19 @@ html {
 
                 &.active {
                     background: rgba(0,0,0,0);
-                    color: #2196F3;
+                    > span {
+                        color: #2196F3;
+                    }
 
+                    &::after {
+                        background-color: #2196F3;
+                    }
+                }
+
+                &:hover {
+                    > span {
+                        color: #474e53;
+                    }
                     &::after {
                         background-color: #2196F3;
                     }
@@ -126,7 +138,6 @@ html {
         }
     }
  
-
     .box {
         min-height: 100px;
         min-width: 150px;

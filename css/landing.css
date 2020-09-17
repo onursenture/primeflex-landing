@@ -90,6 +90,10 @@ html {
   text-shadow: none;
   font-weight: 600;
   font-size: 1rem;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 .landing-body .pf-tabs .tab-nav .tablinks::after {
   content: "";
@@ -106,9 +110,17 @@ html {
 }
 .landing-body .pf-tabs .tab-nav .tablinks.active {
   background: rgba(0, 0, 0, 0);
+}
+.landing-body .pf-tabs .tab-nav .tablinks.active > span {
   color: #2196F3;
 }
 .landing-body .pf-tabs .tab-nav .tablinks.active::after {
+  background-color: #2196F3;
+}
+.landing-body .pf-tabs .tab-nav .tablinks:hover > span {
+  color: #474e53;
+}
+.landing-body .pf-tabs .tab-nav .tablinks:hover::after {
   background-color: #2196F3;
 }
 .landing-body .pf-tabs .tab-nav .tablinks:focus {
