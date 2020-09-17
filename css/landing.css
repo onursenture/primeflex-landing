@@ -324,7 +324,6 @@ html {
 }
 .landing-body .footer-wrapper {
   display: flex;
-  height: 330px;
   background-color: #181B21;
   justify-content: space-around;
   padding: 0 calc(182px + 5%) 20px 5%;
@@ -387,5 +386,9 @@ html {
   }
   .landing-body .content .nav-menu {
     display: none;
+  }
+  .landing-body .footer-wrapper {
+    padding: 30px 5% 0;
+    flex-direction: column;
   }
 }

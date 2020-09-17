@@ -47,9 +47,9 @@
 			</div>
 
 			<div class="hero-npm">
-				<p>npm install primeflex</p>
+				<p id="npm">npm install primeflex</p>
 				<!--Todo #3: Style the button.-->
-				<button class="copy" data-clipboard-text="npm install primeflex">copy</button>
+				<button class="copy" onclick="copyText()" data-clipboard-text="npm install primeflex">copy</button>
 			</div>
 
 			<div class="hero-links">
@@ -358,7 +358,14 @@ $xl:1080px;
 	<script src="js/clipboard.min.js"></script>
 
 	<script>
-		var clip = new Clipboard('.copy');
+		function copyText() {
+			var clip = new Clipboard('.copy');
+			setTimeout(function() {
+				document.getElementById("npm").innerHTML = "Copied!";
+			},5)
+			
+		}
+		
 	</script>
 
 	<script>
