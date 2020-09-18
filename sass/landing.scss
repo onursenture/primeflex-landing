@@ -156,6 +156,9 @@ html {
         height: 64px;
         background-color: #181B21;
         padding: 0 0.25rem 0 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     
         > ul {
             @include flex();

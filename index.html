@@ -67,19 +67,19 @@
 		<!--Issue #3: Border-right overflows to footer area.-->
 		<div class="nav-menu">
 			<ul>
-				<li class="active-navitem"><a href="#">Setup</a></li>
-				<li><a href="#">Display</a></li>
-				<li><a href="#">Elevation</a></li>
-				<li><a href="#">FlexBox</a></li>
-				<li><a href="#">Form Layout</a></li>
-				<li><a href="#">Grid System</a></li>
-				<li><a href="#">Spacing</a></li>
-				<li><a href="#">Text</a></li>
+				<li><a href="#setup">Setup</a></li>
+				<li><a href="#display">Display</a></li>
+				<li><a href="#elevation">Elevation</a></li>
+				<li><a href="#flexbox">FlexBox</a></li>
+				<li><a href="#formlayout">Form Layout</a></li>
+				<li><a href="#gridsystem">Grid System</a></li>
+				<li><a href="#spacing">Spacing</a></li>
+				<li><a href="#text">Text</a></li>
 			</ul>
 		</div>
 
 		<div class="documentation">
-			<h1>Setup</h1>
+			<h1 id="setup">Setup</h1>
 			<p>PrimeFlex is a CSS utility library featuring various helpers such as a grid system, flexbox, spacing,
 				elevation
 				and more. Although it is not required, it is highly recommended to add PrimeFlex as it is likely to need
@@ -190,7 +190,7 @@ $xl:1080px;
     "./node_modules/primeflex/src/_elevation.scss"
 ],
 </code></pre>
-			<h1>Display</h1>
+			<h1 id="display">Display</h1>
 			<p>Efficiently configure the display of the component with <a href="https://github.com/primefaces/primeflex">PrimeFlex</a> display utilities.</p>
 			<div class="card">
 				<h5>Inline</h5>
@@ -216,7 +216,7 @@ $xl:1080px;
 				<p class="p-d-block p-print-none">Not available for printing.</p>
 			</div>
 
-			<h1>ELevation</h1>
+			<h1 id="elevation">Elevation</h1>
 			<p>Efficiently configure the display of the component with <a href="https://github.com/primefaces/primeflex">PrimeFlex</a> display utilities.</p>
 			<div class="card">
 				<h5>Inline</h5>
@@ -356,7 +356,13 @@ $xl:1080px;
 	<script src="js/main.js"></script>
 	<script src="js/prism.js"></script>
 	<script src="js/clipboard.min.js"></script>
+	<script src="js/slideNav.js"></script>
 
+	<script>
+		var nav = new SlideNav({
+		});
+	</script>
+	
 	<script>
 		function copyText() {
 			var clip = new Clipboard('.copy');
