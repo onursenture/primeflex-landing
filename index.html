@@ -67,7 +67,7 @@
 		<!--Issue #3: Border-right overflows to footer area.-->
 		<div class="nav-menu">
 			<ul>
-				<li><a href="#setup">Setup</a></li>
+				<li><a href="#setup" class="active">Setup</a></li>
 				<li><a href="#display">Display</a></li>
 				<li><a href="#elevation">Elevation</a></li>
 				<li><a href="#flexbox">FlexBox</a></li>
@@ -79,220 +79,226 @@
 		</div>
 
 		<div class="documentation">
-			<h1 id="setup">Setup</h1>
-			<p>PrimeFlex is a CSS utility library featuring various helpers such as a grid system, flexbox, spacing,
-				elevation
-				and more. Although it is not required, it is highly recommended to add PrimeFlex as it is likely to need
-				such
-				utilities when developing applications with PrimeNG.</p>
-			<h3>Download</h3>
-			<p>PrimeFlex is available at <a href="#">NPM</a>, if you have an existing application begin with the installation first.</p>
-			<pre><code class="language-js">npm install primeflex --save</code></pre>
-			<h3>Import</h3>
-			<p>Next step is adding the primeflex.css to your application to include all utilities. If you prefer to pick the utilities, move to next step instead.</p>
-			<p><strong>angular.json</strong></p>
-			<!--Issue #1: Broken Prism.js indentation-->
+			<div id="setup">
+				<h1>Setup</h1>
+				<p>PrimeFlex is a CSS utility library featuring various helpers such as a grid system, flexbox, spacing,
+					elevation
+					and more. Although it is not required, it is highly recommended to add PrimeFlex as it is likely to need
+					such
+					utilities when developing applications with PrimeNG.</p>
+				<h3>Download</h3>
+				<p>PrimeFlex is available at <a href="#">NPM</a>, if you have an existing application begin with the installation first.</p>
+				<pre><code class="language-js">npm install primeflex --save</code></pre>
+				<h3>Import</h3>
+				<p>Next step is adding the primeflex.css to your application to include all utilities. If you prefer to pick the utilities, move to next step instead.</p>
+				<p><strong>angular.json</strong></p>
+				<!--Issue #1: Broken Prism.js indentation-->
 <pre><code class="language-json">"styles": [
 	"src/styles.scss",
 	"./node_modules/primeflex/primeflex.css"
 ],</code></pre>
-			<p>PrimeFlex is a lightweight library still if you have an application such as one based on angular-cli that is able to import scss then you will be able to pick the utilities you need to make the app bundle even smaller.</p>
-			<p><strong>angular.json</strong></p>
-			<!--Issue #1: Broken Prism.js indentation-->
+				<p>PrimeFlex is a lightweight library still if you have an application such as one based on angular-cli that is able to import scss then you will be able to pick the utilities you need to make the app bundle even smaller.</p>
+				<p><strong>angular.json</strong></p>
+				<!--Issue #1: Broken Prism.js indentation-->
 <pre><code class="language-json">"styles": [
-    "src/styles.scss",
-    "./node_modules/primeflex/src/_variables.scss",
-    "./node_modules/primeflex/src/_grid.scss",
-    "./node_modules/primeflex/src/_formlayout.scss",
-    "./node_modules/primeflex/src/_display.scss",
-    "./node_modules/primeflex/src/_text.scss",
-    "./node_modules/primeflex/src/flexbox/_flexbox.scss",
-    "./node_modules/primeflex/src/_spacing.scss",
-    "./node_modules/primeflex/src/_elevation.scss"
+	"src/styles.scss",
+	"./node_modules/primeflex/src/_variables.scss",
+	"./node_modules/primeflex/src/_grid.scss",
+	"./node_modules/primeflex/src/_formlayout.scss",
+	"./node_modules/primeflex/src/_display.scss",
+	"./node_modules/primeflex/src/_text.scss",
+	"./node_modules/primeflex/src/flexbox/_flexbox.scss",
+	"./node_modules/primeflex/src/_spacing.scss",
+	"./node_modules/primeflex/src/_elevation.scss"
 ],</code></pre>
-			<h3>Variables</h3>
-			<!--Todo #1: Style variables tables-->
-			<table class="doc-table">
-				<thead>
-					<tr>
-						<th>Variable</th>
-						<th>Description</th>
-						<th>Default</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>$sm</td>
-						<td>Breakpoint of screens such as phones.</td>
-						<td>576px</td>
-					</tr>
-					<tr>
-						<td>$md</td>
-						<td>Breakpoint of screens such as tablets.</td>
-						<td>768px</td>
-					</tr>
-					<tr>
-						<td>$lg</td>
-						<td>Breakpoint of screens such as notebook monitors.</td>
-						<td>992px</td>
-					</tr>
-					<tr>
-						<td>$xl</td>
-						<td>Breakpoint of smaller screens such as desktop monitors.</td>
-						<td>1200px</td>
-					</tr>
-					<tr>
-						<td>$gutter</td>
-						<td>Padding of a grid column.</td>
-						<td>.5rem</td>
-					</tr>
-					<tr>
-						<td>$fieldMargin</td>
-						<td>Spacing of a field. Can be vertical of horizontal depending on form layout.</td>
-						<td>.5rem</td>
-					</tr>
-					<tr>
-						<td>$fieldLabelMargin</td>
-						<td>Spacing of a field label. Can be vertical of horizontal depending on form layout.</td>
-						<td>.5rem</td>
-					</tr>
-					<tr>
-						<td>$helperTextMargin</td>
-						<td>Top spacing of a helper text.</td>
-						<td>.rem</td>
-					</tr>
-					<tr>
-						<td>$spacer</td>
-						<td>Base value to use in spacing utilities, view spacing documentation for details.</td>
-						<td>.5rem</td>
-					</tr>
-				</tbody>
-			</table>
-			
-			<p>There are two ways to use these variables, one option is getting the source code of PrimeFlex from github, compile your own primeflex and importing the css file. Other alternative is importing your own variables to override the defaults if your application can import scss files. Example below overrides breakpoints; </p>
-			<p><strong>_overrides.scss</strong></p>
-			<!--Issue #1: Broken Prism.js indentation-->
+				<h3>Variables</h3>
+				<!--Todo #1: Style variables tables-->
+				<table class="doc-table">
+					<thead>
+						<tr>
+							<th>Variable</th>
+							<th>Description</th>
+							<th>Default</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>$sm</td>
+							<td>Breakpoint of screens such as phones.</td>
+							<td>576px</td>
+						</tr>
+						<tr>
+							<td>$md</td>
+							<td>Breakpoint of screens such as tablets.</td>
+							<td>768px</td>
+						</tr>
+						<tr>
+							<td>$lg</td>
+							<td>Breakpoint of screens such as notebook monitors.</td>
+							<td>992px</td>
+						</tr>
+						<tr>
+							<td>$xl</td>
+							<td>Breakpoint of smaller screens such as desktop monitors.</td>
+							<td>1200px</td>
+						</tr>
+						<tr>
+							<td>$gutter</td>
+							<td>Padding of a grid column.</td>
+							<td>.5rem</td>
+						</tr>
+						<tr>
+							<td>$fieldMargin</td>
+							<td>Spacing of a field. Can be vertical of horizontal depending on form layout.</td>
+							<td>.5rem</td>
+						</tr>
+						<tr>
+							<td>$fieldLabelMargin</td>
+							<td>Spacing of a field label. Can be vertical of horizontal depending on form layout.</td>
+							<td>.5rem</td>
+						</tr>
+						<tr>
+							<td>$helperTextMargin</td>
+							<td>Top spacing of a helper text.</td>
+							<td>.rem</td>
+						</tr>
+						<tr>
+							<td>$spacer</td>
+							<td>Base value to use in spacing utilities, view spacing documentation for details.</td>
+							<td>.5rem</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<p>There are two ways to use these variables, one option is getting the source code of PrimeFlex from github, compile your own primeflex and importing the css file. Other alternative is importing your own variables to override the defaults if your application can import scss files. Example below overrides breakpoints; </p>
+				<p><strong>_overrides.scss</strong></p>
+				<!--Issue #1: Broken Prism.js indentation-->
 <pre><code class="language-scss">$sm:640px;
 $md:720px;
 $lg:960px;
 $xl:1080px;
 </code></pre>
 <pre><code class="language-json">"styles": [
-    "src/styles.scss",
-    "src/_overrides.scss",
-    "./node_modules/primeflex/src/_variables.scss",
-    "./node_modules/primeflex/src/_grid.scss",
-    "./node_modules/primeflex/src/_formlayout.scss",
-    "./node_modules/primeflex/src/_display.scss",
-    "./node_modules/primeflex/src/_text.scss",
-    "./node_modules/primeflex/src/flexbox/_flexbox.scss",
-    "./node_modules/primeflex/src/_spacing.scss",
-    "./node_modules/primeflex/src/_elevation.scss"
+	"src/styles.scss",
+	"src/_overrides.scss",
+	"./node_modules/primeflex/src/_variables.scss",
+	"./node_modules/primeflex/src/_grid.scss",
+	"./node_modules/primeflex/src/_formlayout.scss",
+	"./node_modules/primeflex/src/_display.scss",
+	"./node_modules/primeflex/src/_text.scss",
+	"./node_modules/primeflex/src/flexbox/_flexbox.scss",
+	"./node_modules/primeflex/src/_spacing.scss",
+	"./node_modules/primeflex/src/_elevation.scss"
 ],
 </code></pre>
-			<h1 id="display">Display</h1>
-			<p>Efficiently configure the display of the component with <a href="https://github.com/primefaces/primeflex">PrimeFlex</a> display utilities.</p>
-			<div class="card">
-				<h5>Inline</h5>
-				<input type="text" class="p-mr-2 p-d-inline pf-input" />
-				<input type="text" class="p-d-inline pf-input" />
-		
-				<h5>Block</h5>
-				<input type="text" class="p-mb-2 p-d-block pf-input" />
-				<input type="text" class="p-d-block pf-input" />
-		
-				<h5>Visible on a Small Screen</h5>
-				<p>Resize to view.</p>
-				<button type="button" icon="pi pi-bars" class="p-d-md-none pf-button">Button</button>
-		
-				<h5>Hidden on a Small Screen</h5>
-				<p>Resize to hide.</p>
-				<button type="button" icon="pi pi-search" class="p-d-none p-d-md-inline-flex pf-button "><span>ssss</span></button>
-		
-				<h5>Visible to Print, Invisible for Screen</h5>
-				<p class="p-d-none p-print-block">Only visible when printed.</p>
-		
-				<h5>Visible to Screen, Invisible for Print</h5>
-				<p class="p-d-block p-print-none">Not available for printing.</p>
+			</div>
+			<div id="display">
+				<h1>Display</h1>
+				<p>Efficiently configure the display of the component with <a href="https://github.com/primefaces/primeflex">PrimeFlex</a> display utilities.</p>
+				<div class="card">
+					<h5>Inline</h5>
+					<input type="text" class="p-mr-2 p-d-inline pf-input" />
+					<input type="text" class="p-d-inline pf-input" />
+			
+					<h5>Block</h5>
+					<input type="text" class="p-mb-2 p-d-block pf-input" />
+					<input type="text" class="p-d-block pf-input" />
+			
+					<h5>Visible on a Small Screen</h5>
+					<p>Resize to view.</p>
+					<button type="button" icon="pi pi-bars" class="p-d-md-none pf-button">Button</button>
+			
+					<h5>Hidden on a Small Screen</h5>
+					<p>Resize to hide.</p>
+					<button type="button" icon="pi pi-search" class="p-d-none p-d-md-inline-flex pf-button "><span>ssss</span></button>
+			
+					<h5>Visible to Print, Invisible for Screen</h5>
+					<p class="p-d-none p-print-block">Only visible when printed.</p>
+			
+					<h5>Visible to Screen, Invisible for Print</h5>
+					<p class="p-d-block p-print-none">Not available for printing.</p>
+				</div>
 			</div>
 
-			<h1 id="elevation">Elevation</h1>
-			<p>Efficiently configure the display of the component with <a href="https://github.com/primefaces/primeflex">PrimeFlex</a> display utilities.</p>
-			<div class="card">
-				<h5>Inline</h5>
-				<div class="p-grid">
-						<div class="p-col">
-							<div class="box p-shadow-1">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-2">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-3">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-4">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-5">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-6">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-7">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-8">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-9">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-10">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-11">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-12">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-13">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-14">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-15">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-16">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-17">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-18">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-19">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-20">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-21">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-22">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-23">p-shadow-</div>
-						</div>
-						<div class="p-col">
-							<div class="box p-shadow-24">p-shadow-</div>
-						</div>
+			<div id="elevation">
+				<h1>Elevation</h1>
+				<p>Efficiently configure the display of the component with <a href="https://github.com/primefaces/primeflex">PrimeFlex</a> display utilities.</p>
+				<div class="card">
+					<h5>Inline</h5>
+					<div class="p-grid">
+							<div class="p-col">
+								<div class="box p-shadow-1">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-2">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-3">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-4">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-5">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-6">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-7">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-8">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-9">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-10">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-11">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-12">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-13">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-14">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-15">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-16">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-17">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-18">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-19">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-20">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-21">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-22">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-23">p-shadow-</div>
+							</div>
+							<div class="p-col">
+								<div class="box p-shadow-24">p-shadow-</div>
+							</div>
+					</div>
 				</div>
 			</div>
 
@@ -311,19 +317,19 @@ $xl:1080px;
 				</div>
 				<div id="source" class="tabcontent">
 					<h3>Source</h3>
-					<pre><code class="language-json">"styles": [
-						"src/styles.scss",
-						"src/_overrides.scss",
-						"./node_modules/primeflex/src/_variables.scss",
-						"./node_modules/primeflex/src/_grid.scss",
-						"./node_modules/primeflex/src/_formlayout.scss",
-						"./node_modules/primeflex/src/_display.scss",
-						"./node_modules/primeflex/src/_text.scss",
-						"./node_modules/primeflex/src/flexbox/_flexbox.scss",
-						"./node_modules/primeflex/src/_spacing.scss",
-						"./node_modules/primeflex/src/_elevation.scss"
-					],
-					</code></pre>
+<pre><code class="language-json">"styles": [
+	"src/styles.scss",
+	"src/_overrides.scss",
+	"./node_modules/primeflex/src/_variables.scss",
+	"./node_modules/primeflex/src/_grid.scss",
+	"./node_modules/primeflex/src/_formlayout.scss",
+	"./node_modules/primeflex/src/_display.scss",
+	"./node_modules/primeflex/src/_text.scss",
+	"./node_modules/primeflex/src/flexbox/_flexbox.scss",
+	"./node_modules/primeflex/src/_spacing.scss",
+	"./node_modules/primeflex/src/_elevation.scss"
+],
+</code></pre>
 				</div>
 			</div>
 		</div>
@@ -360,6 +366,9 @@ $xl:1080px;
 
 	<script>
 		var nav = new SlideNav({
+			speed: 50,
+			changeHash: false,
+			threshold: 65
 		});
 	</script>
 	

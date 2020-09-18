@@ -19,13 +19,14 @@ var SlideNav = function () {
 
 		//default values
 		if (!options) var options = {};
-		this.activeClass = options.activeClass || 'active-navitem';
+		this.activeClass = options.activeClass || 'active';
 		this.toggleButtonSelector = options.toggleButtonSelector || false;
 		this.toggleBoxSelector = options.toggleBoxSelector || false;
 		this.speed = options.speed > 0 ? options.speed : 70;
 		this.hideAfterSelect = options.hideBoxAfterSelect || true;
 		this.changeHash = options.changeHash || false;
 		this.navBoxToggleClass = options.navBoxToggleClass || false;
+		this.threshold = options.threshold || 0;
 
 		//initialize
 		this.init();
@@ -123,7 +124,7 @@ var SlideNav = function () {
 					    offset = this.scrollDoc.scrollTop,
 					    scrollHeight = this.scrollDoc.scrollHeight;
 
-					if (section && (section.offsetTop <= offset && section.offsetTop + section.offsetHeight > offset || offset + window.innerHeight == scrollHeight)) {
+					if (section && (section.offsetTop - this.threshold <= offset && section.offsetTop + section.offsetHeight - this.threshold > offset || offset + window.innerHeight == scrollHeight)) {
 						var _iteratorNormalCompletion3 = true;
 						var _didIteratorError3 = false;
 						var _iteratorError3 = undefined;
@@ -132,7 +133,7 @@ var SlideNav = function () {
 							for (var _iterator3 = this.navAnchors[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
 								var link = _step3.value;
 
-								if (link.href != anchor.href) link.classList.remove('active-navitem');
+								if (link.href != anchor.href) link.classList.remove('active');
 							}
 						} catch (err) {
 							_didIteratorError3 = true;
@@ -149,7 +150,7 @@ var SlideNav = function () {
 							}
 						}
 
-						anchor.classList.add('active-navitem');
+						anchor.classList.add('active');
 					}
 				}
 			} catch (err) {
@@ -172,7 +173,7 @@ var SlideNav = function () {
 		value: function goToSection(linkHash) {
 			var section = this.getSection(linkHash);
 			if (section) {
-				var offsetTop = section.offsetTop;
+				var offsetTop = section.offsetTop - this.threshold;
 				this.scrollTo(offsetTop, this.speed);
 				if (this.hideAfterSelect) this.hideNavBox();
 				if (this.changeHash) {

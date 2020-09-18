@@ -274,40 +274,40 @@ html {
                 list-style-type: none;
                 margin: 0;
                 padding: 30px 0 0;
+                position: sticky;
+                top: 64px;
             
                 > li {
                     padding: 5px 20px;
                     margin: 5px 0;
                     position: relative;
 
-                    &::after {
-                        content: '';
-                        display: none;
-                        background-color:#4e5258;
-                        height: 100%;
-                        width: 4px;
-                        position: absolute;
-                        right: 0;
-                        top: 0;
-                        right: -4px;
-                    }
-
                     > a {
                         color:#4e5258;
                         font-weight: 500;
 
+                        &::after {
+                            content: '';
+                            display: none;
+                            background-color:#4e5258;
+                            height: 100%;
+                            width: 4px;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            right: -4px;
+                        }
+
                         &:hover {
                             color:#3c3f44;
                         }
-                    }
 
-                    &.active-navitem {
-                        &::after {
-                            display: block;
-                        }
-                        
-                        > a {
+                        &.active {
                             color:#303438;
+
+                            &::after {
+                                display: block;
+                            }
                         }
                     }
                
