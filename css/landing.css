@@ -255,6 +255,8 @@ html {
               .landing-body .content .nav-menu > ul > li > a.active::after {
                 display: block; }
     .landing-body .content .documentation {
+      width: 100%;
+      box-sizing: border-box;
       padding: 0 calc(182px + 5%) 20px 5%; }
     .landing-body .content .doc-table {
       border-collapse: collapse;

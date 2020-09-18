@@ -316,6 +316,8 @@ html {
         }
         
         .documentation {
+            width: 100%;
+            box-sizing: border-box;
             padding: 0 calc(182px + 5%) 20px 5%
         }
 
