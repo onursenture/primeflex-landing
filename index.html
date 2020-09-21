@@ -333,18 +333,25 @@ $xl:1080px;
 				</div>
 				<div id="source" class="tabcontent">
 					<h3>Source</h3>
-<pre><code class="language-json">"styles": [
-	"src/styles.scss",
-	"src/_overrides.scss",
-	"./node_modules/primeflex/src/_variables.scss",
-	"./node_modules/primeflex/src/_grid.scss",
-	"./node_modules/primeflex/src/_formlayout.scss",
-	"./node_modules/primeflex/src/_display.scss",
-	"./node_modules/primeflex/src/_text.scss",
-	"./node_modules/primeflex/src/flexbox/_flexbox.scss",
-	"./node_modules/primeflex/src/_spacing.scss",
-	"./node_modules/primeflex/src/_elevation.scss"
-],
+					<a href="https://github.com/primefaces/primeng/tree/master/src/app/showcase/components/primeflex/" target="_blank">
+						<span>View on GitHub</span>
+					</a>
+					<a href="https://stackblitz.com/edit/primeng-primeflex-elevation-demo" style="margin-left: .5em;" target="_blank">
+						<span>Edit in StackBlitz</span>
+					</a>
+<pre><code class="language-html">&lt;div class="p-grid"&gt;
+    &lt;div class="p-col" *ngFor="let box of boxes; index as i"&gt;
+        &lt;div [class]="'box p-shadow-' + (i + 1)"&gt;
+            p-shadow-&#123;&#123;i + 1&#125;&#125;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-typescript">export class ElevationDemo &#123;
+
+	boxes: Array&lt;number&gt; = new Array(24);
+		
+&#125;
 </code></pre>
 				</div>
 			</div>
