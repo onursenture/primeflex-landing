@@ -812,9 +812,11 @@ $xl:1080px;
 			</div>
 
 			</div>
+			<!--margin-top neeeded to be deleted?-->
 			<div id="formlayout" style="margin-top:4rem">
 				<h1>Form Layout</h1>
 				<p>Form layout is a CSS utility optimized for creating forms with ease. FormLayout is not included in PrimeNG as it is provided by <a href="https://github.com/primefaces/primeflex">PrimeFlex</a>, a shared grid library between PrimeFaces, PrimeNG, PrimeReact and PrimeVue projects.</p>
+
 				<div class="card">
 					<h5>Vertical</h5>
 					<div class="pf-fluid">
@@ -828,6 +830,115 @@ $xl:1080px;
 						</div>
 					</div>
 				</div>
+				
+				<div class="card">
+					<h5>Vertical and Grid</h5>
+					<div class="pf-fluid p-formgrid p-grid">
+							<div class="p-field p-col">
+							<label for="firstname2">Firstname</label>
+							<input id="firstname2" class="pf-input" type="text"> 
+						</div>
+						<div class="p-field p-col">
+							<label for="lastname2">Lastname</label>
+							<input id="lastname2" class="pf-input" type="text"> 
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<h5>Horizontal and Fixed Width</h5>
+					<div class="p-field p-grid">
+						<label for="firstname3" class="p-col-fixed" style="width:100px">Firstname</label>
+						<div class="p-col">
+							<input id="firstname3" class="pf-input" type="text"> 
+						</div>
+					</div>
+					<div class="p-field p-grid">
+						<label for="lastname3" class="p-col-fixed" style="width:100px">Lastname</label>
+						<div class="p-col">
+							<input id="lastname3" class="pf-input" type="text"> 
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<h5>Horizontal and Fluid</h5>
+					<div class="pf-fluid">
+						<div class="p-field p-grid">
+							<label for="firstname4" class="p-col-12 p-mb-2 p-md-2 p-mb-md-0">Firstname</label>
+							<div class="p-col-12 p-md-10">
+								<input id="firstname4" class="pf-input" type="text"> 
+							</div>
+						</div>
+						<div class="p-field p-grid">
+							<label for="lastname4" class="p-col-12 p-mb-2 p-md-2 p-mb-md-0">Lastname</label>
+							<div class="p-col-12 p-md-10">
+								<input id="lastname4" class="pf-input" type="text"> 
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<h5>Inline</h5>
+					<div class="p-formgroup-inline">
+						<div class="p-field">
+							<!--p-sr-only?-->
+							<label for="firstname5" class="p-sr-only">Firstname</label>
+							<input id="firstname5" class="pf-input" type="text" placeholder="Firstname"> 
+						</div>
+						<div class="p-field">
+							<label for="lastname5" class="p-sr-only">Lastname</label>
+							<input id="lastname5" class="pf-input" type="text" placeholder="Lastname"> 
+						</div>
+						<button class="pf-button" type="button">Submit</button>
+					</div>
+				</div>
+
+				<!--add vertical-radiobutton section-->
+				<!--does not look similar to primeng version-->
+				<div class="card">
+					<h5>Help Text</h5>
+					<div class="p-field p-fluid">
+						<label for="username">Username</label>
+						<input id="username" class="pf-input" type="username" aria-describedby="username-help"> 
+						<small id="username-help">Enter your username to reset your password.</small>
+					</div>
+				</div>
+				
+				<div class="card">
+					<h5>Advanced</h5>
+					<div class="p-fluid p-formgrid p-grid">
+						<div class="p-field p-col-12 p-md-6">
+							<label for="firstname6">Firstname</label>
+							<input id="firstname6" type="text"> 
+						</div>
+						<div class="p-field p-col-12 p-md-6">
+							<label for="lastname6">Lastname</label>
+							<input id="lastname6" type="text"> 
+						</div>
+						<!--add text-area-->
+					</div>
+				</div>
+
+				<!--<div class="pf-tabs">
+					<div class="tab-nav">
+						<button class="tablinks active" onclick="openTab(event, 'documentation')">
+							<span>Documentation</span>
+						</button>
+						<button class="tablinks" onclick="openTab(event, 'source')">
+							<span>Source</span>
+						</button>
+					</div>
+					<div id="documentation" class="tabcontent" style="display: block;">
+						selamın aleykum
+					</div>
+					<div id="source" class="tabcontent">
+						aleyküm selam
+					</div>
+				</div>-->
+
+
 
 			</div>
 		</div>
