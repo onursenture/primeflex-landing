@@ -328,6 +328,7 @@ h5:first-child {
 }
 .landing-body .content .nav-menu > ul > li > a.active {
   color: #303438;
+  font-weight: bold;
 }
 .landing-body .content .nav-menu > ul > li > a.active::after {
   display: block;
