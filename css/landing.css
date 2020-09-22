@@ -172,6 +172,9 @@ h5:first-child {
   background: lightgray;
   border-radius: 4px;
 }
+.landing-body .demo-container {
+  border: 1px solid lightgray;
+}
 .landing-body .topbar {
   display: -webkit-box;
   display: -ms-flexbox;

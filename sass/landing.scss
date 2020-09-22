@@ -185,6 +185,10 @@ h5 {
         border-radius: 4px;
     }
 
+    .demo-container {
+        border: 1px solid lightgray;
+    }
+
     .topbar {
         @include flex();
         @include flex-justify-between();

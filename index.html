@@ -56,7 +56,6 @@
 
 			<div class="hero-npm">
 				<p id="npm">npm install primeflex</p>
-				<!--Todo #3: Style the button.-->
 				<button class="copy" onclick="copyText()" data-clipboard-text="npm install primeflex">copy</button>
 			</div>
 
@@ -72,7 +71,6 @@
 	</div>
 	
 	<div class="content">
-		<!--Issue #3: Border-right overflows to footer area.-->
 		<div class="nav-menu">
 			<ul>
 				<li><a href="#setup" class="active">Setup</a></li>
@@ -100,14 +98,12 @@
 				<h3>Import</h3>
 				<p>Next step is adding the primeflex.css to your application to include all utilities. If you prefer to pick the utilities, move to next step instead.</p>
 				<p><strong>angular.json</strong></p>
-				<!--Issue #1: Broken Prism.js indentation-->
 <pre><code class="language-json">"styles": [
 	"src/styles.scss",
 	"./node_modules/primeflex/primeflex.css"
 ],</code></pre>
 				<p>PrimeFlex is a lightweight library still if you have an application such as one based on angular-cli that is able to import scss then you will be able to pick the utilities you need to make the app bundle even smaller.</p>
 				<p><strong>angular.json</strong></p>
-				<!--Issue #1: Broken Prism.js indentation-->
 <pre><code class="language-json">"styles": [
 	"src/styles.scss",
 	"./node_modules/primeflex/src/_variables.scss",
@@ -120,7 +116,6 @@
 	"./node_modules/primeflex/src/_elevation.scss"
 ],</code></pre>
 				<h3>Variables</h3>
-				<!--Todo #1: Style variables tables-->
 				<table class="doc-table">
 					<thead>
 						<tr>
@@ -180,7 +175,6 @@
 				
 				<p>There are two ways to use these variables, one option is getting the source code of PrimeFlex from github, compile your own primeflex and importing the css file. Other alternative is importing your own variables to override the defaults if your application can import scss files. Example below overrides breakpoints; </p>
 				<p><strong>_overrides.scss</strong></p>
-				<!--Issue #1: Broken Prism.js indentation-->
 <pre><code class="language-scss">$sm:640px;
 $md:720px;
 $lg:960px;
@@ -200,6 +194,7 @@ $xl:1080px;
 ],
 </code></pre>
 			</div>
+			
 			<div id="display">
 				<h1>Display</h1>
 				<p>Efficiently configure the display of the component with <a href="https://github.com/primefaces/primeflex">PrimeFlex</a> display utilities.</p>
@@ -227,6 +222,7 @@ $xl:1080px;
 					<p class="p-d-block p-print-none">Not available for printing.</p>
 				</div>
 			</div>
+
 			<div id="elevation" class="elevation">
 				<h1>Elevation</h1>
 				<p>Efficiently configure the display of the component with <a href="https://github.com/primefaces/primeflex">PrimeFlex</a> display utilities.</p>
@@ -351,6 +347,7 @@ $xl:1080px;
 					</div>
 				</div>
 			</div>
+
 			<div id="flexbox">
 				<h1>FlexBox</h1>
 				<p>Easily manage the layout of your components with the responsive FlexBox utilities. </p>
@@ -812,8 +809,8 @@ $xl:1080px;
 			</div>
 
 			</div>
-			<div id="formlayout" style="margin-top:4rem">
-				<!--margin-top neeeded to be deleted?-->
+
+			<div id="formlayout">
 				<h1>Form Layout</h1>
 				<p>Form layout is a CSS utility optimized for creating forms with ease. FormLayout is not included in PrimeNG as it is provided by <a href="https://github.com/primefaces/primeflex">PrimeFlex</a>, a shared grid library between PrimeFaces, PrimeNG, PrimeReact and PrimeVue projects.</p>
 
@@ -883,23 +880,68 @@ $xl:1080px;
 					<h5>Inline</h5>
 					<div class="p-formgroup-inline">
 						<div class="p-field">
-							<!--p-sr-only?-->
-							<label for="firstname5" class="p-sr-only">Firstname</label>
+							<label for="firstname5">Firstname</label>
 							<input id="firstname5" class="pf-input" type="text" placeholder="Firstname"> 
 						</div>
 						<div class="p-field">
-							<label for="lastname5" class="p-sr-only">Lastname</label>
+							<label for="lastname5">Lastname</label>
 							<input id="lastname5" class="pf-input" type="text" placeholder="Lastname"> 
 						</div>
 						<button class="pf-button" type="button">Submit</button>
 					</div>
 				</div>
 
-				<!--add vertical-radiobutton section-->
-				<!--does not look similar to primeng version-->
+				<div class="card">
+					<h5>Vertical Checkbox</h5>
+					<div class="p-field-checkbox">
+						<input class="pf-checkbox" type="checkbox" name="city1" id="city1"></input>
+						<label for="city1">Chicago</label>
+					</div>
+					<div class="p-field-checkbox">
+						<input class="pf-checkbox" type="checkbox" name="city2" id="city2"></input>
+						<label for="city2">Los Angeles</label>
+					</div>
+			
+					<h5>Horizontal Checkbox</h5>
+					<div class="p-formgroup-inline">
+						<div class="p-field-checkbox">
+							<input class="pf-checkbox" type="checkbox" name="city3" id="city3"></p-checkbox>
+							<label for="city3">Chicago</label>
+						</div>
+						<div class="p-field-checkbox">
+							<input class="pf-checkbox" type="checkbox" name="city4" id="city4"></p-checkbox>
+							<label for="city4">Los Angeles</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<h5>Vertical RadioButton</h5>
+					<div class="p-field-radiobutton">
+						<input type="radio" name="city5" id="city5"></input>
+						<label for="city5">Chicago</label>
+					</div>
+					<div class="p-field-radiobutton">
+						<input type="radio" name="city5" id="city6"></input>
+						<label for="city6">Los Angeles</label>
+					</div>
+			
+					<h5>Horizontal RadioButton</h5>
+					<div class="p-formgroup-inline">
+						<div class="p-field-radiobutton">
+						<input type="radio" name="city6" id="city7"></input>
+						<label for="city7">Chicago</label>
+						</div>
+						<div class="p-field-radiobutton">
+							<input type="radio" name="city6" id="city8"></input>
+							<label for="city8">Los Angeles</label>
+						</div>
+					</div>
+				</div>
+
 				<div class="card">
 					<h5>Help Text</h5>
-					<div class="p-field p-fluid">
+					<div class="p-field pf-fluid">
 						<label for="username">Username</label>
 						<input id="username" class="pf-input" type="username" aria-describedby="username-help"> 
 						<small id="username-help">Enter your username to reset your password.</small>
@@ -908,36 +950,41 @@ $xl:1080px;
 				
 				<div class="card">
 					<h5>Advanced</h5>
-					<div class="p-fluid p-formgrid p-grid">
+					<div class="pf-fluid p-formgrid p-grid">
 						<div class="p-field p-col-12 p-md-6">
 							<label for="firstname6">Firstname</label>
-							<input id="firstname6" type="text"> 
+							<input class="pf-input" id="firstname6" type="text"> 
 						</div>
 						<div class="p-field p-col-12 p-md-6">
 							<label for="lastname6">Lastname</label>
-							<input id="lastname6" type="text"> 
+							<input class="pf-input" id="lastname6" type="text"> 
 						</div>
-						<!--add text-area-->
+						<div class="p-field p-col-12">
+							<label for="address">Address</label>
+							<textarea class="pf-input" id="address" type="text" rows="4"></textarea>
+						</div>
 					</div>
 				</div>
 
-				<!--<div class="pf-tabs">
+				<!--scroll issue: mert-->
+				<div class="pf-tabs">
 					<div class="tab-nav">
-						<button class="tablinks active" onclick="openTab(event, 'documentation')">
+						<button type="button" class="tablinks active" onclick="openTab(event, 'documentation-formlayout')">
 							<span>Documentation</span>
 						</button>
-						<button class="tablinks" onclick="openTab(event, 'source')">
+						<button type="button" class="tablinks" onclick="openTab(event, 'source-formlayout')">
 							<span>Source</span>
 						</button>
 					</div>
-					<div id="documentation" class="tabcontent" style="display: block;">
+					<div id="documentation-formlayout" class="tabcontent" style="display: block;">
 						selamın aleykum
 					</div>
-					<div id="source" class="tabcontent">
+					<div id="source-formlayout" class="tabcontent">
 						aleyküm selam
 					</div>
-				</div>-->
+				</div>
 			</div>
+
 			<div id="gridsystem">
 				<h1>Grid System</h1>
 				<p>Grid is a lightweight flex based responsive layout utility optimized for mobile phones, tablets and desktops.</p>
@@ -954,16 +1001,6 @@ $xl:1080px;
 						<div class="box">3</div>
 					</div>
 				</div>
-
-				<!--<h5>Dynamic</h5>
-				<button pButton pRipple type="button" icon="pi pi-plus" title="Add Column" (click)="addColumn()" [disabled]="columns.length === 20" class="p-mr-2"></button>
-				<button pButton pRipple type="button" icon="pi pi-minus" title="Remove Column" (click)="removeColumn()"[disabled]="columns.length === 1"></button>
-				<div class="p-grid p-mt-2">
-					<div class="p-col" *ngFor="let col of columns; let i=index" [@animation]="'visible'">
-						<div class="box">{{i + 1}}</div>
-					</div>
-				</div>
-				-->
 				
 				<h5>Reverse Direction</h5>
 				<div class="p-grid p-flex-row-reverse">
@@ -1277,6 +1314,72 @@ $xl:1080px;
 					</div>
 					<div class="p-col-4">
 						<div class="box box-stretched">4</div>
+					</div>
+				</div>
+				<!--add tab here again-->
+
+			</div>
+
+			<div id="spacing">
+				<h1>Spacing</h1>
+				<p><a href="https://github.com/primefaces/primeflex">PrimeFlex</a> provides various spacing utilities to modify an element's layout.</p>
+
+				<div class="card">
+					<h5>Margin</h5>
+					<p><strong>Without Spacing</strong></p>
+					<button class="pf-button" type="button" label="Button 1" style="width:20rem">Button</button><button class="pf-button" type="button" label="Button 2" style="width:20rem">Button</button>
+			
+					<p><strong>With Spacing</strong></p>
+					<button class="pf-button" type="button" label="Button 1" style="width:20rem" class="p-mr-2 p-mb-2">Button</button><button class="pf-button" type="button" label="Button 2" style="width:20rem" class="p-mb-2">Button</button>
+			
+					<h5>Responsive Margin</h5>
+					<p><strong>Without Spacing</strong></p>
+					<div class="p-grid p-formgrid pf-fluid">
+						<div class="p-col-12 p-lg-4">
+							<input class="pf-input" type="text">
+						</div>
+						<div class="p-col-12 p-lg-4">
+							<input class="pf-input" type="text">
+						</div>
+						<div class="p-col-12 p-lg-4">
+							<input class="pf-input" type="text">
+						</div>
+					</div>
+			
+					<p><strong>With Spacing</strong></p>
+					<div class="p-grid p-formgrid pf-fluid">
+						<div class="p-col-12 p-mb-2 p-lg-4 p-mb-lg-0">
+							<input class="pf-input" type="text">
+						</div>
+						<div class="p-col-12 p-mb-2 p-lg-4 p-mb-lg-0">
+							<input class="pf-input" type="text">
+						</div>
+						<div class="p-col-12 p-mb-2 p-lg-4 p-mb-lg-0">
+							<input class="pf-input" type="text">
+						</div>
+					</div>
+			
+					<p><strong>Center</strong></p>
+					<div class="demo-container p-p-4">
+						<button type="button" label="Button" class="pf-button p-d-block p-mx-auto">Button</button>
+					</div>
+				</div>
+
+				<div class="card">
+					<h5>Padding</h5>
+					<p><strong>Without Spacing</strong></p>
+					<div class="demo-container">
+						<button class="pf-button" type="button" label="Button">Button</button>
+					</div>
+			
+					<p><strong>With Spacing</strong></p>
+					<div class="demo-container p-p-3">
+						<button class="pf-button" type="button" label="Button">Button</button>
+					</div>
+			
+					<p><strong>Responsive Spacing</strong></p>
+					<div class="demo-container p-p-0 p-p-sm-1 p-p-md-2 p-p-lg-3">
+						<button class="pf-button" type="button" label="Button">Button</button>
 					</div>
 				</div>
 
