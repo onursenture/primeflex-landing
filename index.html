@@ -198,6 +198,7 @@ $xl:1080px;
 			<div id="display">
 				<h1>Display</h1>
 				<p>Efficiently configure the display of the component with <a href="https://github.com/primefaces/primeflex">PrimeFlex</a> display utilities.</p>
+
 				<div class="card">
 					<h5>Inline</h5>
 					<input type="text" class="p-mr-2 p-d-inline pf-input" />
@@ -220,6 +221,23 @@ $xl:1080px;
 			
 					<h5>Visible to Screen, Invisible for Print</h5>
 					<p class="p-d-block p-print-none">Not available for printing.</p>
+				</div>
+				
+				<div class="pf-tabs">
+					<div class="tab-nav">
+						<button class="tablinks active" onclick="openTab(event, 'documentation-display')">
+							<span>Documentation</span>
+						</button>
+						<button class="tablinks" onclick="openTab(event, 'source-display')">
+							<span>Source</span>
+						</button>
+					</div>
+					<div id="documentation-display" class="tabcontent" style="display: block;">
+						Selamun Aleyküm
+					</div>
+					<div id="source-display" class="tabcontent">
+						Aleyküm Selam
+					</div>
 				</div>
 			</div>
 
@@ -303,14 +321,14 @@ $xl:1080px;
 				</div>
 				<div class="pf-tabs">
 					<div class="tab-nav">
-						<button class="tablinks active" onclick="openTab(event, 'documentation')">
+						<button class="tablinks active" onclick="openTab(event, 'documentation-elevation')">
 							<span>Documentation</span>
 						</button>
-						<button class="tablinks" onclick="openTab(event, 'source')">
+						<button class="tablinks" onclick="openTab(event, 'source-elevation')">
 							<span>Source</span>
 						</button>
 					</div>
-					<div id="documentation" class="tabcontent" style="display: block;">
+					<div id="documentation-elevation" class="tabcontent" style="display: block;">
 						<h3>Getting Started</h3>
 						<p>Elevation is added to an element using the .p-shadow-{level} class.</p>
 <pre><code class="language-html">&lt;div class="p-shadow-1" /&gt;
@@ -322,7 +340,7 @@ $xl:1080px;
 						<h3>Dependencies</h3>
 						<p>PrimeFlex.</p>
 					</div>
-					<div id="source" class="tabcontent">
+					<div id="source-elevation" class="tabcontent">
 						<h3>Source</h3>
 						<a href="https://github.com/primefaces/primeng/tree/master/src/app/showcase/components/primeflex/" target="_blank">
 							<span>View on GitHub</span>
@@ -966,7 +984,6 @@ $xl:1080px;
 					</div>
 				</div>
 
-				<!--scroll issue: mert-->
 				<div class="pf-tabs">
 					<div class="tab-nav">
 						<button type="button" class="tablinks active" onclick="openTab(event, 'documentation-formlayout')">
@@ -1316,7 +1333,23 @@ $xl:1080px;
 						<div class="box box-stretched">4</div>
 					</div>
 				</div>
-				<!--add tab here again-->
+				
+				<div class="pf-tabs">
+					<div class="tab-nav">
+						<button class="tablinks active" onclick="openTab(event, 'documentation-gridsystem')">
+							<span>Documentation</span>
+						</button>
+						<button class="tablinks" onclick="openTab(event, 'source-gridsystem')">
+							<span>Source</span>
+						</button>
+					</div>
+					<div id="documentation-gridsystem" class="tabcontent" style="display: block;">
+						Selamun Aleyküm
+					</div>
+					<div id="source-gridsystem" class="tabcontent">
+						Aleyküm Selam
+					</div>
+				</div>
 
 			</div>
 
@@ -1383,7 +1416,22 @@ $xl:1080px;
 					</div>
 				</div>
 
-				<!--add tab here again-->
+				<div class="pf-tabs">
+					<div class="tab-nav">
+						<button class="tablinks active" onclick="openTab(event, 'documentation-spacing')">
+							<span>Documentation</span>
+						</button>
+						<button class="tablinks" onclick="openTab(event, 'source-spacing')">
+							<span>Source</span>
+						</button>
+					</div>
+					<div id="documentation-spacing" class="tabcontent" style="display: block;">
+						Selamun Aleyküm
+					</div>
+					<div id="source-spacing" class="tabcontent">
+						Aleyküm Selam
+					</div>
+				</div>
 
 			</div>
 
@@ -1414,7 +1462,22 @@ $xl:1080px;
 					<div class="p-mb-3 p-text-italic">Italic</div>
 				</div>
 
-				<!--insert tab here-->
+				<div class="pf-tabs">
+					<div class="tab-nav">
+						<button class="tablinks active" onclick="openTab(event, 'documentation-text')">
+							<span>Documentation</span>
+						</button>
+						<button class="tablinks" onclick="openTab(event, 'source-text')">
+							<span>Source</span>
+						</button>
+					</div>
+					<div id="documentation-text" class="tabcontent" style="display: block;">
+						Selamun Aleyküm
+					</div>
+					<div id="source-text" class="tabcontent">
+						Aleyküm Selam
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
