@@ -19,6 +19,10 @@ html {
         text-decoration: none;
     }
 
+    pre {
+        margin-bottom: 2rem !important;
+    }
+
     .pf-button {
         color: #ffffff;
         background: #2196F3;
@@ -63,6 +67,13 @@ html {
         border: 1px solid #ced4da;
         appearance: none;
         border-radius: 3px;
+    }
+
+    .pf-fluid {
+        .pf-input {
+            width: 100%;
+            box-sizing: border-box;
+        }
     }
     
     .pf-tabs {
@@ -193,7 +204,7 @@ html {
         @include flex();
         @include flex-align-center();
         @include flex-justify-between();
-        padding: 30px 0 20px calc(182px + 5%);
+        padding-left: 12rem;
         background-color: #181B21;
         height:506px;
     
@@ -325,7 +336,7 @@ html {
         .documentation {
             width: 100%;
             box-sizing: border-box;
-            padding: 0 calc(182px + 5%) 20px 5%
+            padding: 0 4rem;
         }
 
         .doc-table {
@@ -348,7 +359,7 @@ html {
 
         .card {
             background: white;
-            padding: 2rem;
+            padding: 1rem;
             box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
             border-radius: 4px;
             margin-bottom: 2rem;
@@ -359,7 +370,6 @@ html {
         display: flex;
         background-color: #181B21;
         justify-content: space-around;
-        padding: 0 calc(182px + 5%) 20px 5%;
 
         .footer-content {
 
