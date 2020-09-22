@@ -164,6 +164,7 @@ h5 {
             border: 0 none;
         }
     }
+
     .elevation{
         .box {
             min-height: 100px;
@@ -177,7 +178,12 @@ h5 {
         }
     }
     
-    
+    .vertical-container {
+        margin: 0;
+        height: 200px;
+        background: lightgray;
+        border-radius: 4px;
+    }
 
     .topbar {
         @include flex();
