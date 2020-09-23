@@ -40,6 +40,10 @@ a:hover {
 .landing-body pre {
   margin-bottom: 2rem !important;
 }
+.landing-body .section {
+  border-bottom: 2px solid #ECEFF4;
+  margin-bottom: 4rem;
+}
 .landing-body .pf-button {
   color: #ffffff;
   background: #2196F3;
