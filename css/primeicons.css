@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'primeicons';
     font-display: auto;
-    src: url('./font/primeicons.eot');
-    src: url('./font/primeicons.eot?#iefix') format('embedded-opentype'), url('./font/primeicons.ttf') format('truetype'), url('./font/primeicons.woff') format('woff'), url('./font/primeicons.svg?#primeicons') format('svg');
+    src: url('../font/primeicons.eot');
+    src: url('../font/primeicons.eot?#iefix') format('embedded-opentype'), url('../font/primeicons.ttf') format('truetype'), url('../font/primeicons.woff') format('woff'), url('../font/primeicons.svg?#primeicons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
