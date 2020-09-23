@@ -179,11 +179,11 @@ a:hover {
 .landing-body .vertical-container {
   margin: 0;
   height: 200px;
-  background: lightgray;
+  background: #ECEFF4;
   border-radius: 4px;
 }
 .landing-body .demo-container {
-  border: 1px solid lightgray;
+  border: 1px solid #ECEFF4;
 }
 .landing-body .topbar {
   display: -webkit-box;
