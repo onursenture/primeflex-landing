@@ -192,12 +192,6 @@ h5:first-child {
   top: 0;
   z-index: 1000;
 }
-.landing-body .topbar .mobile-topbar-button {
-  display: none;
-  width: 1.5rem;
-  height: 1.5rem;
-  border: 1px solid white;
-}
 .landing-body .topbar > ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -413,21 +407,6 @@ h5:first-child {
   }
 }
 @media (max-width: 992px) {
-  .landing-body .topbar .mobile-topbar-button {
-    display: block;
-  }
-  .landing-body .topbar .topbar-menu {
-    display: none;
-    background-color: wheat;
-    width: 100%;
-    position: absolute;
-    top: 64px;
-    left: 0;
-  }
-  .landing-body .topbar .topbar-menu.active {
-    display: flex;
-    flex-direction: column;
-  }
   .landing-body .hero-wrapper {
     padding: 30px 5% 0;
     flex-direction: column;
