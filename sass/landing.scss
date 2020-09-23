@@ -188,6 +188,12 @@ a {
             border-radius: 4px;
         }
     }
+
+    .copy {
+        &:hover {
+            cursor: pointer;
+        }
+    }
     
     .vertical-container {
         margin: 0;
