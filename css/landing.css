@@ -385,6 +385,9 @@ a:hover {
 .landing-body .footer-wrapper .footer-content p {
   color: rgba(255, 255, 255, 0.74);
 }
+.landing-body .footer-wrapper .footer-content a {
+  font-weight: normal;
+}
 .landing-body .footer-wrapper .footer-content .button-contribute {
   background: #0078E3;
   border: 0;
